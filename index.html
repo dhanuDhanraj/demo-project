@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Discovery</title>
+    <!-- Google Fonts Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="#" class="logo" onclick="showHomePage(); return false;">MovieDB</a>
+            <nav class="main-nav">
+                <a href="#" onclick="showHomePage()">Home</a>
+                <a href="#" onclick="showFavoritesPage()">My Favorites</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- MOVIE GRID VIEW -->
+        <section id="movie-grid-section">
+            <!-- Hero Section -->
+            <div class="hero">
+                <h1>Welcome to MovieDB</h1>
+                <p>Discover millions of movies. Explore now.</p>
+            </div>
+
+            <div class="controls-bar">
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search for any movie...">
+                </div>
+                <div class="filter-sort-container">
+                    <select id="genre-filter">
+                        <option value="">All Genres</option>
+                    </select>
+                    <!-- New Year Filter Input -->
+                    <input type="number" id="year-filter" placeholder="Year" min="1900" max="2099">
+                    <select id="sort-by">
+                        <option value="popularity.desc">Most Popular</option>
+                        <option value="release_date.desc">Newest</option>
+                        <option value="vote_average.desc">Top Rated</option>
+                    </select>
+                </div>
+            </div>
+
+            <h2 id="page-title">Discover Movies</h2>
+            <div id="movie-grid" class="movie-grid">
+                <!-- Movie cards will be injected here by JavaScript -->
+            </div>
+             <!-- Empty State Message -->
+            <div id="empty-state" class="hidden">
+                <p>No movies found. Try a different search or filter.</p>
+            </div>
+            <!-- Loader for infinite scroll -->
+            <div id="loader"></div>
+        </section>
+
+        <!-- FAVORITES VIEW -->
+        <section id="favorites-section" class="hidden">
+            <h2 id="favorites-title">My Favorite Movies</h2>
+            <div id="favorites-grid" class="movie-grid">
+                <!-- Favorite movie cards will be injected here -->
+            </div>
+        </section>
+
+        <!-- MOVIE DETAILS VIEW -->
+        <section id="movie-details-section" class="hidden">
+            <!-- Container for the main movie details -->
+            <div id="movie-detail-content">
+                <!-- Movie details will be injected here -->
+            </div>
+            <!-- Container for the similar movies grid -->
+            <div id="similar-movies-container">
+                <!-- Similar movies will be injected here -->
+            </div>
+        </section>
+        
+        <!-- ERROR MESSAGE VIEW -->
+        <section id="error-section" class="hidden">
+            <div class="error-message">
+                <h2>Oops! Something went wrong.</h2>
+                <p id="error-text">Could not fetch data. Please check your connection and try again.</p>
+                <button class="back-button" onclick="showHomePage()">Retry</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>Powered by <a href="https://www.themoviedb.org/" target="_blank" rel="noopener noreferrer">TMDb</a></p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="test.js"></script>
+</body>
+</html>
+
