@@ -2,7 +2,7 @@
 
 This is a responsive single-page "Movie Discovery" application built with vanilla HTML, CSS, and JavaScript. It integrates with the TMDb API to allow users to discover, search, filter, and save their favorite movies. This project was built as a design assessment for Zephvion.
 
-Live Demo URL: [Paste your live URL from Netlify here]
+Live Demo URL:(https://68cae364672e0f1044fec40f--moviediscoverydb.netlify.app/)
 
 ---
 
@@ -66,3 +66,4 @@ To run this project locally, no complex build steps are needed.
 - **Client-Side API Key**: For this project, the TMDb API key is stored on the client side. For a production-level application, this key would be hidden behind a server-side proxy or a serverless function to ensure it is not publicly exposed.
 
 - **No Build Step**: The project uses vanilla JavaScript without a build process, which simplifies setup but means there is no code minification or bundling for production optimization.
+
